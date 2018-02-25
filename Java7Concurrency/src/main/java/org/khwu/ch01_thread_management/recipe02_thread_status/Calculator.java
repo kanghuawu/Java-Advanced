@@ -29,7 +29,7 @@ public class Calculator implements Runnable {
             }
             threads[i].setName("Thread " + i);
         }
-        try (FileWriter file = new FileWriter("/Users/khwu/Projects/Spring5-Reactive-Programming/java9/src/main/java/java7_concurrency/ch01_thread_management/recipe02_thread_status/log.txt"); PrintWriter pw = new PrintWriter(file);) {
+        try (FileWriter file = new FileWriter("/Users/khwu/Projects/Java-Advanced/Java7Concurrency/src/main/java/org/khwu/ch01_thread_management/recipe02_thread_status/log.txt"); PrintWriter pw = new PrintWriter(file);) {
             for (int i = 0; i < 10; i++) {
                 pw.println(String.format("Main: Status of Thread %d : %s", i, threads[i].getState()));
                 status[i] = threads[i].getState();
